@@ -1,3 +1,10 @@
+:root{ 
+  --nav-h: 64px;
+  --page-max: 980px;
+  --glass-bg: rgba(255,255,255,0.45);
+  --glass-bd: rgba(255,255,255,0.6);
+}
+
 /*TopNav*/
 .topnav {
     --horizontal-padding: 16px;
@@ -35,6 +42,34 @@
     transition: background-color 120ms ease, transform 80ms ease;
   }
   .topnav .menu a:hover{
-    background: rgba(255,255,255,0.55);
+    background: rgba(132, 228, 220, 0.664);
     transform: translateY(-1px);
   }
+/*autocenter*/
+.autocenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  flex: 1;
+  align-items: center;
+  margin:  auto;
+}
+.center-text {
+  max-width: 57%;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 20px auto;
+  text-align: center;
+}  
+/*Cards*/
+.cardsContainer { 
+  --horizPadding: 16px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: var(--horizPadding);
+  padding-right: var(--horizPadding);
+  width: calc(100% - 2 * var(--horizPadding));
+}
