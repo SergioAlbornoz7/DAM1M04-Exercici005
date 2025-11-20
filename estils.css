@@ -77,10 +77,32 @@
   max-width: calc(33.333% - 1px) !important;
   height: 53vh;
   box-shadow: 0 2px 12px rgba(0,0,0,2);
-  
+}
+.b{
+  background-image: url(./assets/img/kancolle1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-
+.b:hover{
+  transition: ease 2s;
+  background-image: url(./assets/img/kancolle2.jpg);
+}
+.c {
+  background-image: url(./assets/img/GirlsundPanzer1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.c:hover{
+  transition: linear(0, 1, 0.5, 1, 0.9,1);
+  transition-duration: 1s;
+  background-image: url(./assets/img/GirlsundPanzer2.jpg);
+  flex: 0 0 calc(33.333% - 1px) !important;
+  max-width: calc(33.333% - 1px) !important;
+  height: 53vh;
+}
 /*Columnas*/
 .col3 {
   display: flex;
@@ -109,3 +131,30 @@
   font-size: 1.1rem;
   font-weight: 800;
 }
+
+/*Animaciones*/
+@keyframes girar {
+  0%   { transform: rotate(0deg)}
+  50%  { transform: rotate(180deg)}
+  100% { transform: rotate(360deg)}
+}
+@keyframes bloc {
+  0%    {background-color: aqua; opacity: 10%; border-radius: 0px;}
+  25%   {transform: rotate(180deg); background-color: rgb(255, 132, 224); opacity: 50%;}
+  50%   {transform: rotate(360deg); background-color: rgb(85, 0, 165); opacity: 100%;  border-radius: 50%;}
+  75%   {transform: translateY(20vw); background-color: rgb(70, 175, 0); opacity: 50%;}
+  100%    {transform: translateY(-20vw); background-color: rgb(0, 255, 157); opacity: 10%; border-radius: 100%;}
+}
+.lod {
+  animation: girar 1s linear infinite;
+  width: 5vh;
+  margin-top: 5vh;
+  border-radius: 100%;
+}
+.bloc {
+  animation: bloc 10s linear infinite;
+  width: 50vw;
+  margin-top: 15vw;
+}
+
+
