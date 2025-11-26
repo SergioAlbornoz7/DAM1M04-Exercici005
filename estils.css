@@ -146,13 +146,28 @@
   100%    {transform: translateY(-20vw); background-color: rgb(0, 255, 157); opacity: 10%; border-radius: 100%;}
 }
 @keyframes reveal {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(0);
+    transform: translateY(100px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0% { transform: translateX(-1vh); }
+  100% { transform: translateX(1vh); }
+}
+@keyframes pulse {
+  0% { background-color: rgb(190, 190, 190); }
+  100% { background-color: aquamarine; }
+}
+@supports not (animation-timeline: view()) {
+  .scrollblq {
+    opacity: 1;
+    transform: translateY(0);
+    animation-name: none;
   }
 }
 .lod {
@@ -168,11 +183,11 @@
 }
 .scrollblq {
   margin-top: 40vh;
-  animation-name: reveal;
-  animation-duration: 1s;
+  animation-name: reveal,shake;
+  animation-duration: 1s,0.1s;
   animation-fill-mode: both;
 
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 77%;
 }
 
