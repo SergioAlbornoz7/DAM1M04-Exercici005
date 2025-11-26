@@ -145,6 +145,16 @@
   75%   {transform: translateY(20vw); background-color: rgb(70, 175, 0); opacity: 50%;}
   100%    {transform: translateY(-20vw); background-color: rgb(0, 255, 157); opacity: 10%; border-radius: 100%;}
 }
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .lod {
   animation: girar 1s linear infinite;
   width: 5vh;
@@ -156,5 +166,13 @@
   width: 50vw;
   margin-top: 15vw;
 }
+.scrollblq {
+  margin-top: 40vh;
+  animation-name: reveal;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
 
