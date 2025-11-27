@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&family=Science+Gothic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 :root{ 
   --nav-h: 64px;
   --page-max: 980px;
@@ -132,6 +136,20 @@
   font-weight: 800;
 }
 
+/*tabla*/
+.tabla {
+  border: 1px solid black;
+}
+.tabla > tr {
+  border: 1px solid black;
+}
+.tabla > tr > td {
+  border: 1px solid black;
+}
+.tabla > tr > th {
+  border: 1px solid black;
+}
+
 /*Animaciones*/
 @keyframes girar {
   0%   { transform: rotate(0deg)}
@@ -191,3 +209,56 @@
   animation-range: entry 0% cover 77%;
 }
 
+/*Fuentes*/
+h1 {
+  font-family: "Stack Sans Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+p {
+  font-family: "Stack Sans Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.science-gothic {
+  font-family: "Science Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "CTRS" 0;
+}
+.playwrite-us-trad-guides-regular {
+  font-family: "Playwrite US Trad Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.bungee-spice-regular {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*Icon*/
+.icon-ejemplo {
+  font-family: 'Material Symbols Outlined';
+  font-variation-settings: 'opsz' 24, 'wght' 400, 'FILL' 0;
+  font-size: 48px;
+  display: inline-block;
+  margin: 10px;
+  color: #4CAF50;
+  transition: font-variation-settings 0.3s ease;
+}
+.opsz {
+  font-size: 24px;
+  font-variation-settings: 'opsz' 48;
+}
+.wght {
+  font-variation-settings: 'wght' 700;
+}
+.fill {
+  font-variation-settings: 'FILL' 1;
+}
